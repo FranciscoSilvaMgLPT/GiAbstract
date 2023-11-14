@@ -50,14 +50,15 @@ public class Person {
     }
 
 
-    protected void halfDayPass() {
+    protected boolean halfDayPass() {
         Random rnd = new Random();
         int random = rnd.nextInt(15) + 5;
         this.foodLvl = this.foodLvl - random;
         if (die()) {
             System.out.println("Hi! Welcome to heaven!");
-            Game.persons.remove(this);
+            return false;
         }
+        return true;
     }
 
     private boolean die() {

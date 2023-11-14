@@ -4,4 +4,9 @@ public class Pizza extends Food{
     public Pizza(String name, int foodLvlGain, double price) {
         super(name, foodLvlGain, price);
     }
+
+    @Override
+    public int getCalories() {
+        return foodLvlGain;
+    }
 }

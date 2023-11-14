@@ -12,6 +12,7 @@ public abstract class Food {
         this.price = price;
     }
 
+    public abstract int getCalories();
 
 
 

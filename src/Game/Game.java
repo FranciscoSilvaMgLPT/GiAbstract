@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Game {
-    static ArrayList<Person> persons = new ArrayList<>();
-    static ArrayList<Food> foods = new ArrayList<>();
+     ArrayList<Person> persons = new ArrayList<>();
+     ArrayList<Food> foods = new ArrayList<>();
 
     public void start() throws InterruptedException {
         foods.add(new Hamburguer("Hamburguer", 15, 7.6));
@@ -77,7 +77,11 @@ public class Game {
                     person.goToWork();
                     break;
                 case 3:
-                    person.halfDayPass();
+                  if(  person.halfDayPass()){
+                      System.out.println("A day has past.");
+                  }else{
+                      persons.remove(person);
+                  }
                     break;
                 case 4:
                     menu();
